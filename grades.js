@@ -1,24 +1,32 @@
 //practicing statements and methods with vanilla javascript
 
 var scores;
-var grade;
+var grade = 0
 var finalGrades;
+var msg = '';
+var i;
 
+grades = ['A', 'B', 'C', 'D', 'F']; //declares the grade variable with an identifier
 scores = [82, 71, 95, 55, 98, 69, 72, 78, 84, 64, 58, 87]; //array of score values
 
 var finalGrades = scores.sort(function(a,b) {return a-b});
 console.log("finalGrades", finalGrades);
 
-grade = ['A', 'B', 'C', 'D', 'F']; //declares the grade variable with an identifier
+var scoreTotal = finalGrades.length;
 
+for (i = 0; i < scoreTotal; i++) {
+	grade = (i + 1);
+	
+	msg += 'Grade ' + grade + ':';
+	msg += scores[i] + '<br />';
+}
 
-//Display the appropriate grade based on the current score
-function checkScore(finalGrades) {
+document.getElementById('grade').innerHTML = msg;
+Display the appropriate grade based on the current score
 if (finalGrades >= 60) {
-	return finalGrades = 'F';
+	console.log(grade[0]);
 	console.log("grade", grade);
-
-} else if (finalGrades >= 61) {
+} else if (finalGrades >= 61) &&  {
 	grade = 'D';
 	console.log("grade", grade);
 } else if (finalGrades >= 71) {
@@ -49,7 +57,7 @@ el2.textContent = 'Highest Grade: ' + highestGrade;
 lowestGrade = Math.min(finalGrades);
 console.log ("lowestGrade", lowestGrade);
 var el3 = document.getElementById('lowest');
-el3.textContent = 'Lowest Grade: ' + lowestGrade;
+// el3.textContent = 'Lowest Grade: ' + lowestGrade;
 
 
 
@@ -61,11 +69,11 @@ el3.textContent = 'Lowest Grade: ' + lowestGrade;
 // var grade_D = 0;
 // var grade_F = 0;
 
-// for (var i = 0; i < arrayLength; i++) {
+for (var i = 0; i < array.length; i++) {
 
-// if (scores[i] >= 91) {
-// 	grade_A++;
-// 	console.log("grade_A", grade_A);
+if (scores[i] >= 91) {
+	grade_A++;
+	console.log("grade_A", grade_A);
 
 // } else if (scores[i] > 80) {
 // 	grade_B++;
