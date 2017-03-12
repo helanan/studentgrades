@@ -13,4 +13,3 @@ Use console.log to output the following criteria:
 How many of each grade?
 What is the lowest grade?
 What is the highest grade?
-Contact GitHub API Training Shop Blog About
